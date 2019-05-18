@@ -1,0 +1,21 @@
+<ion-view view-title="categories">
+ <ion-content class="padding por">
+  <h2 class="title">Welcome</h2>
+  <div class="container">
+  	<div class="row">
+	    <div class="col-50 n1" ng-repeat="x in categories">
+	    	<div class="cuadrado">
+	    		<ul>
+		    		<li>
+		    			<span>{{x.nombre}}</span>
+	    			</li>
+	    			<li>
+		    			<i class="{{x.icono}}"></i>
+	    			</li>
+	    		</ul>
+	    	</div> 
+	    </div>
+	</div>    
+  </div>
+  </ion-content>
+</ion-view>

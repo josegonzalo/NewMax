@@ -1,2 +1,2 @@
-# NewMax
-aplicación ya mejorada 
+# MAX
+listas

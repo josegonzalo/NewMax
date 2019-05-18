@@ -1,0 +1,44 @@
+/* Empty. Add your own CSS if you like */
+/*wallpaper */
+/*Fondo de pantalla*/
+.por{
+	background-color: #ffffff;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+/*Design of the square in general */
+/*Diseño del Cuadrado en  general*/
+.cuadrado{
+	width: 100%;
+	border-style: solid;
+	border-width: 2px;
+	height: 100px;
+	text-align: center;
+	font-family: 'Indie Flower', cursive;
+	font-size: 15px;
+	color: #b30000;
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+}
+/*Desing from all the space between to tallys*/
+/*Diseño de toda el espacio entre cuadrados*/
+.row{
+	flex-wrap: wrap;
+}
+/*Container*/
+/*Contenedores*/
+.n1{
+	padding: 2%;
+}
+/*size from the icon*/
+/*tamaño de los iconos*/
+i {
+	font-size: 40px;
+}
+.title{
+	text-align: center;
+	font-family: 'Maiden Orange', cursive;
+ }
