@@ -42,3 +42,30 @@ i {
 	text-align: center;
 	font-family: 'Maiden Orange', cursive;
  }
+ .tv{
+	display:block;
+	margin:auto;
+	width: 400px;
+	height: 250px;
+}
+.tx{
+	text-align: center;
+	font-size: 40px;
+}
+.cuadrado2{
+	width: 100%;
+	border-style: solid;
+	border-width: 2px;
+	height: 400px;
+	padding: 185px;
+	text-align: center;
+	font-family: 'Indie Flower', cursive;
+	font-size: 15px;
+	color: #b30000;
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+}
+.n2{
+	padding: 2%;
+}

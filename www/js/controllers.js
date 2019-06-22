@@ -1,86 +1,90 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyBWaIas-guCZ9IGjCdMfbkVJNoOSpTtRz8",
-    authDomain: "maxapp-659bd.firebaseapp.com",
-    databaseURL: "https://maxapp-659bd.firebaseio.com",
-    projectId: "maxapp-659bd",
-    storageBucket: "maxapp-659bd.appspot.com",
-    messagingSenderId: "537653727870",
-    appId: "1:537653727870:web:9466a59097b32b88"
-  };
+	apiKey: "AIzaSyBWaIas-guCZ9IGjCdMfbkVJNoOSpTtRz8",
+	authDomain: "maxapp-659bd.firebaseapp.com",
+	databaseURL: "https://maxapp-659bd.firebaseio.com",
+	projectId: "maxapp-659bd",
+	storageBucket: "maxapp-659bd.appspot.com",
+	messagingSenderId: "537653727870",
+	appId: "1:537653727870:web:9466a59097b32b88"
+};
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
+
 angular.module('starter.controllers', [])
 
-.controller('categories', function($scope) {
+.controller('categories', function($scope,$state,$rootScope) {
+
+	$rootScope.diccionario = []
+
   $scope.categories = 
   [
   {
-    nombre:"TV y Videos",
-    icono:"ion-ios-monitor"
+	nombre:"TV y Videos",
+	icono:"ion-ios-monitor"
   },
   {
-    nombre:"Celulares",
-    icono:"ion-iphone"
+	nombre:"Celulares",
+	icono:"ion-iphone"
   },
   {
-    nombre:"Lineas Blancas",
-    icono:"fas fa-blender-phone"
+	nombre:"Lineas Blancas",
+	icono:"fas fa-blender-phone"
   },
   {
-    nombre:"Videos Juegos",
-    icono:"ion-playstation"
+	nombre:"Videos Juegos",
+	icono:"ion-playstation"
   },
   {
-    nombre:"Computadoras y tables",
-    icono:"fas fa-laptop"
+	nombre:"Computadoras y tables",
+	icono:"fas fa-laptop"
   },
   {
-    nombre:"Audios",
-    icono:"ion-speakerphone"
+	nombre:"Audios",
+	icono:"ion-speakerphone"
   },
   {
-    nombre:"Audios para Vehiculos",
-    icono:"ion-volume-high"
+	nombre:"Audios para Vehiculos",
+	icono:"ion-volume-high"
   },
   {
-    nombre:"Camaras y Drones",
-    icono:"ion-camera"
+	nombre:"Camaras y Drones",
+	icono:"ion-camera"
   },
    {
-    nombre:"Audifonos y Bocinas",
-    icono:"ion-headphone"
+	nombre:"Audifonos y Bocinas",
+	icono:"ion-headphone"
    },
    {
-    nombre:"Prendas electronicas",
-    icono:"fas fa-clock"
+	nombre:"Prendas electronicas",
+	icono:"fas fa-clock"
    },
    {
-    nombre:"Cuidados Personales",
-    icono:"ion-bag "
+	nombre:"Cuidados Personales",
+	icono:"ion-bag "
    },
    {
-    nombre:"Ambientadores",
-    icono:"ion-earth"
+	nombre:"Ambientadores",
+	icono:"ion-earth"
    },
    {
-    nombre:"Contenido Digital",
-    icono:"ion-printer"
+	nombre:"Contenido Digital",
+	icono:"ion-printer"
    },
    {
-    nombre:"Telefonos fijos",
-    icono:"ion-ios-telephone"
+	nombre:"Telefonos fijos",
+	icono:"ion-ios-telephone"
    },
    {
-    nombre:"Bicicletas electronicas",
-    icono:"fas fa-bicycle"
+	nombre:"Bicicletas electronicas",
+	icono:"fas fa-bicycle"
    },
    {
-    nombre:"Hogar",
-    icono:"ion-ios-home"
+	nombre:"Hogar",
+	icono:"ion-ios-home"
    },
    {
-    nombre:"Paneles solares",
-    icono:"fas fa-solar-panel"
+	nombre:"Paneles solares",
+	icono:"fas fa-solar-panel"
    }
   ]
   /*
@@ -102,6 +106,27 @@ angular.module('starter.controllers', [])
   "Hogar": "home-heart",
   "Paneles solares": "solar-panel", 
   */
+
+  /*Retrive all data firebase*/
+	var dProductos = firebase.database().ref('Producto');
+		dProductos.on('value', function(snapshot) {
+		console.log();
+		$rootScope.diccionario.push(snapshot.val())
+		console.log(snapshot.val())
+	});
+
+	$scope.entrar = function(data){
+		console.log(data.nombre)
+		$state.go("sub_categories")
+	}
+
+
+
+})
+
+.controller("sub_categoriesCtrl", function($scope, $rootScope){
+	$scope.prod = $rootScope.diccionario
+	//console.log($scope.prod[0])
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {
@@ -115,7 +140,7 @@ angular.module('starter.controllers', [])
 
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
-    Chats.remove(chat);
+	Chats.remove(chat);
   };
 })
 
@@ -125,6 +150,6 @@ angular.module('starter.controllers', [])
 
 .controller('AccountCtrl', function($scope) {
   $scope.settings = {
-    enableFriends: true
+	enableFriends: true
   };
 });

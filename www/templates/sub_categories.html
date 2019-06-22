@@ -1,56 +1,16 @@
 <ion-view>
 	<ion-content>
-		<img src="www/img/logoMax.png">
-		<div class="tvideos">
-			Tv y Videos
+	<i class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="tab.categories">Back</i>
+	<img src="img/tv.jpg" class="tv">
+	<h1 class="tx">Television LG</h1>
+	<div class="container">
+		<div class="col">
+			<div class="col-50 n2" ng-repeat="z in prod">
+				<div class="cuadrado2">
+					{{z.name}}
+				</div>
+			</div>
 		</div>
-		<div class="celulares">
-			Celulares
-		</div>
-		<div class="Lblancas">
-			Lineas Blancas
-		</div>
-		<div class="juegos">
-			Video Juegos
-		</div>
-		<div class="compu">
-			Computadoras y tablets
-		</div>
-		<div class="audio">
-			Audio
-		</div>
-		<div class="Vehiculos">
-			Audios Para Vehiculos
-		</div>
-		<div class="camara">
-			Camaras y Drones
-		</div>
-		<div class="audifonos">
-			Audios Para Audifonos
-		</div>
-		<div class="prendas">
-			Prendas Electronicas
-		</div>
-		<div class="personales">
-			Cuidados personales
-		</div>
-		<div class="ambiente">
-			Ambientadores
-		</div>
-		<div class="digital">
-			contenidos digitales
-		</div>
-		<div class="telefonos">
-			Telefonos Fijos
-		</div>
-		<div class="bici">
-			Bicicletas Electronicas
-		</div>
-		<div class="hogar">
-			Hogar
-		</div>
-		<div class="panel">
-			Paneles Solares
-		</div>
+	</div>
 	</ion-content>
 </ion-view>

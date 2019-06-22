@@ -54,6 +54,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('sub_categories', {
+    url: '/sub_categories',
+    templateUrl: 'templates/sub_categories.html',
+    controller: 'sub_categoriesCtrl'
+  })
+
   .state('tab.chats', {
       url: '/chats',
       views: {
