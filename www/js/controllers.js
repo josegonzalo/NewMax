@@ -115,8 +115,11 @@ angular.module('starter.controllers', [])
 		console.log(snapshot.val())
 	});
 
+
+
 	$scope.entrar = function(data){
 		console.log(data.nombre)
+    $rootScope.enlacecategories = data.nombre;
 		$state.go("sub_categories")
 	}
 
@@ -125,7 +128,10 @@ angular.module('starter.controllers', [])
 })
 
 .controller("sub_categoriesCtrl", function($scope, $rootScope){
-	$scope.prod = $rootScope.diccionario
+	$scope.prod = $rootScope.enlacecategories
+  console.log("--------------------------")
+  console.log($rootScope.enlacecategories)
+  console.log("--------------------------")
 	//console.log($scope.prod[0])
 })
 

@@ -8,6 +8,13 @@
 	-o-background-size:cover;
 	background-size:cover;
 }
+.por2{
+	background-color:  #e6e6e6;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
 /*Design of the square in general */
 /*Diseño del Cuadrado en  general*/
 .cuadrado{
@@ -45,26 +52,33 @@ i {
  .tv{
 	display:block;
 	margin:auto;
-	width: 400px;
+	width: 350px;
 	height: 250px;
+}
+.tv2{
+	display: block;
+	margin: auto;
+	width: 150px;
+	height: 150px;	
 }
 .tx{
 	text-align: center;
 	font-size: 40px;
+	color:  #1a1a1a;
+	font-family: 'Permanent Marker', cursive;
 }
 .cuadrado2{
 	width: 100%;
 	border-style: solid;
 	border-width: 2px;
 	height: 400px;
-	padding: 185px;
-	text-align: center;
-	font-family: 'Indie Flower', cursive;
+	padding: 10px;
+	text-align: left;
+	font-family: 'Courgette', cursive;
 	font-size: 15px;
 	color: #b30000;
 	display: flex;
-	align-items: center;
-	justify-content: center; 
+	background-color: #ffffff;
 }
 .n2{
 	padding: 2%;
