@@ -107,16 +107,18 @@ angular.module('starter.controllers', [])
   "Paneles solares": "solar-panel", 
   */
 
+  $rootScope.Carrito = []
+
   /*Retrive all data firebase*/
-	var dProductos = firebase.database().ref('Producto');
-		dProductos.on('value', function(snapshot) {
-		console.log();
-		$rootScope.diccionario.push(snapshot.val())
-		console.log(snapshot.val())
-	});
+  var leadsRef = firebase.database().ref("/Producto");
+  leadsRef.on("value", function(snapshot){
+    snapshot.forEach(function(childSnapshot){
+     $rootScope.diccionario.push(childSnapshot.val());
+    })
+  })
 
 
-
+    
 	$scope.entrar = function(data){
 		console.log(data.nombre)
     $rootScope.enlacecategories = data.nombre;
@@ -132,7 +134,12 @@ angular.module('starter.controllers', [])
   console.log("--------------------------")
   console.log($rootScope.enlacecategories)
   console.log("--------------------------")
+  $scope.productos = $rootScope.diccionario
+  console.log($scope.productos)
 	//console.log($scope.prod[0])
+  $scope.compra = function(x){
+    $rootScope.Carrito.push(x)
+  }
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {
