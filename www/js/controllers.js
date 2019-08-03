@@ -9,6 +9,8 @@ var firebaseConfig = {
 };
   // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+  /*_storage_*/
+ var storage = firebase.storage();
 
 angular.module('starter.controllers', [])
 
@@ -17,7 +19,7 @@ angular.module('starter.controllers', [])
 	$rootScope.diccionario = []
 
   $scope.categories = 
-  [
+  [       
   {
 	nombre:"TV y Videos",
 	icono:"ion-ios-monitor"
@@ -138,8 +140,16 @@ angular.module('starter.controllers', [])
   console.log($scope.productos)
 	//console.log($scope.prod[0])
   $scope.compra = function(x){
-    $rootScope.Carrito.push(x)
+    $rootScope.Carrito.push(x)  
   }
+    // Create a child reference
+  var imagesRef = storageRef.child('images');
+  // imagesRef now points to 'images'
+
+  // Child references can also take paths delimited by '/'
+  var spaceRef = storageRef.child('images/space.jpg');
+  // spaceRef now points to "images/space.jpg"
+  // imagesRef still points to "images"
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {
@@ -166,3 +176,5 @@ angular.module('starter.controllers', [])
 	enableFriends: true
   };
 });
+
+/**/
