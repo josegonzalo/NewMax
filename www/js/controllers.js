@@ -9,8 +9,6 @@ var firebaseConfig = {
 };
   // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-  /*_storage_*/
- var storage = firebase.storage();
 
 angular.module('starter.controllers', [])
 
@@ -122,7 +120,6 @@ angular.module('starter.controllers', [])
 
     
 	$scope.entrar = function(data){
-		console.log(data.nombre)
     $rootScope.enlacecategories = data.nombre;
 		$state.go("sub_categories")
 	}
@@ -132,6 +129,8 @@ angular.module('starter.controllers', [])
 })
 
 .controller("sub_categoriesCtrl", function($scope, $rootScope){
+
+
 	$scope.prod = $rootScope.enlacecategories
   console.log("--------------------------")
   console.log($rootScope.enlacecategories)
@@ -142,14 +141,7 @@ angular.module('starter.controllers', [])
   $scope.compra = function(x){
     $rootScope.Carrito.push(x)  
   }
-    // Create a child reference
-  var imagesRef = storageRef.child('images');
-  // imagesRef now points to 'images'
 
-  // Child references can also take paths delimited by '/'
-  var spaceRef = storageRef.child('images/space.jpg');
-  // spaceRef now points to "images/space.jpg"
-  // imagesRef still points to "images"
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {
