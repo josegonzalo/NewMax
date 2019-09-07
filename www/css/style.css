@@ -100,10 +100,29 @@ i {
 	font-weight: 900;
 }
 .buyButton{
-	margin-left: 10px;
+	margin-left: 1px;
+	width: 50px;
+	padding: 0px;
 	float: left;
-	background-color: 	#BA2431;
-	color: #FFFFFF;
+	background-color: #BA2431;
+	color: #ffffff;
+}
+.buyButtondos{
+	margin-left: 1px;
+	width: 120px;
+	padding: 5px;
+	float: left;
+	background-color: #BA2431;
+	color: #ffffff;
+}
+.buyButtontree{
+	margin-left: 1px;
+	width: 50px;
+	padding: 5px;
+	float: left;
+	height: 100px;
+	background-color: #BA2431;
+	color: #ffffff;
 }
 .textCompra{
 	padding: 0 0 0 5px;

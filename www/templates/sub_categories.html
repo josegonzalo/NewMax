@@ -1,13 +1,13 @@
 	<ion-view>
 	<ion-content class="por2">
-	<i class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="tab.categories">Back</i>
+	<i class="button fas fa-arrow-circle-left button-clear button-dark buyButtontree" ui-sref="tab.categories"></i>
 	<img src="img/tienda.png" class="tv">
 	<h1 class="tx">{{prod}}</h1>
 	<div class="container">
 		<div class="row">
 			<div class="col">
 				<div class="item">
-					<button class="button icon-left ion-cash buyButton"></button>
+					<i class="button fas fa-shopping-cart button-ligth buyButton"></i>
 					<p class="textCompra">Carrito de Compras</p>
 					<p class="textCompra">Q.000.00</p>
 				</div>
@@ -25,12 +25,13 @@
 					</div>
 
 					<div class="item item-body">
-					    <img class="tv2" src="img/lg.png">
+					    <img class="tv2" src="{{x.foto}}">
 					    	<p>
 							    <h2>{{x.name}}</h2>
+							    <h4>Precio del Producto:</h4>
 							    <p>Q{{x.Price}}</p>
-					     		<p class="lol">Oferta solo hasta el 27 de Julio 2019</p>
-					     		<button class="button icon-left ion-bag buyButton">COMPRAR</button>
+					     		<p class="lol">Oferta solo hasta el 17 de Septiembre 2019</p>
+					     		<button class="button icon-left ion-bag buyButtondos">COMPRAR</button>
 					 		</p>
 					</div>
 				</div>
@@ -40,3 +41,5 @@
 	
 	</ion-content>
 </ion-view>
+
+
