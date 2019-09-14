@@ -132,14 +132,13 @@ angular.module('starter.controllers', [])
 
 
 	$scope.prod = $rootScope.enlacecategories
-  console.log("--------------------------")
-  console.log($rootScope.enlacecategories)
-  console.log("--------------------------")
   $scope.productos = $rootScope.diccionario
+  $rootScope.carrito={};
   console.log($scope.productos)
 	//console.log($scope.prod[0])
   $scope.compra = function(x){
-    $rootScope.Carrito.push(x)  
+    $rootScope.carrito[x.name] = x.Price;
+    console.log($rootScope.carrito)
   }
 
 })

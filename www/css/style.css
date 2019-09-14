@@ -108,8 +108,16 @@ i {
 	color: #ffffff;
 }
 .buyButtondos{
-	margin-left: 1px;
+	margin-right: 1px;
 	width: 120px;
+	padding: 5px;
+	float: left;
+	background-color: #BA2431;
+	color: #ffffff;
+}
+.buyButtondos2{
+	margin-left: 50px;
+	width: 55px;
 	padding: 5px;
 	float: left;
 	background-color: #BA2431;
