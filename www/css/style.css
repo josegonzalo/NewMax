@@ -134,7 +134,64 @@ i {
 }
 .textCompra{
 	padding: 0 0 0 5px;
-	color: #0000;
+	color: #ffffff;
 	font-family: "Times New Roman", Times, serif;
 	font-weight: 1000;
+}
+/*menu*/
+ul#menu {
+ background: #ffffff;
+ width: 325px;
+ padding: 0px;
+ float:left;
+}
+  
+ul#menu li {
+ color: #fff;
+ float: left;
+ list-style: none;
+ margin: 0% 1%;
+}
+  
+ul#menu li:hover{
+ color: #aaa073;
+ cursor:pointer;
+}
+  
+ul#menu ul {
+ display: none;
+ position: absolute;
+ top: 40px;
+ background: #333;
+ color: #fff;
+ padding: 1px 0px 0px 0px;
+ margin: 0;
+ }
+  
+ul#menu ul li{
+ float: left;	
+ color: #fff;
+ width:100%;
+ margin: 5px 0px;
+ font-size: 11px;
+ font-family: oblique; 
+}
+ 
+ul#menu ul li a{
+ color: #fff;
+}
+  
+ul#menu ul li a:hover{
+ color: #aaa073;
+ cursor:pointer;
+}
+  
+ul#menu li:hover ul ul,ul#menu li:hover ul ul ul,ul#menu li.iehover ul ul,ul#menu li.iehover ul ul ul {
+ display: none;
+ cursor:pointer;
+}
+  
+ul#menu li:hover ul,ul#menu ul li:hover ul,ul#menu ul ul li:hover ul,ul#menu li.iehover ul,ul#menu ul li.iehover ul,ul#menu ul ul li.iehover ul {
+ display: block;
+ cursor:pointer;
 }
