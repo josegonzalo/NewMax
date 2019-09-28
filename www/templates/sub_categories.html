@@ -12,6 +12,9 @@
 							<li><p class="textCompra">Carrito de Compras</p>
 								<ul ng-repeat="x in carrito">
 									<li class="textCompra" >Q{{carrito}}</li>	
+								</ul>
+								<ul>
+									<span>{{carrito.total}}</span>
 								</ul> 
 							</li>
 					</ul>
@@ -26,7 +29,7 @@
 				<div class="list card">
 
 					<div class="item">
-						<img src="img/lgd.png" class="iconos">
+						<img src="{{x.fotoLogo}}" class="iconos">
 					</div>
 
 					<div class="item item-body">
