@@ -4,7 +4,28 @@
 	<img src="img/tienda.png" class="tv">
 	<h1 class="tx">{{prod}}</h1>
 	<div class="container">
-		<div class="row">
+		<div class="container diseñocarro">
+			<div class="row carro">
+				<div class="col-25">
+					<i class="button fas fa-shopping-cart button-ligth buyButton iconcar"></i>
+				</div>
+				<div class="col-75 textocompamos">
+					<div class="dropdown">
+						<span class="textcarro">Carrito de Compras</span>
+						<div class="dopcontent">
+							<span class="btnlink" ng-repeat= "(name,price) in carrito">
+								<p>{{name}}</p>
+								<p>Q.{{price}}</p>
+								<i class="button fas fa-trash-alt" ng-click="deleteItem(name)"></i>
+							</span>
+						</div>
+
+						<span>{{carrito.total}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--<div class="row">
 			<div class="col">
 				<div class="item">
 					<ul id="menu">
@@ -13,14 +34,10 @@
 								<ul ng-repeat="x in carrito">
 									<li class="textCompra" >Q{{carrito}}</li>	
 								</ul>
-								<ul>
-									<span>{{carrito.total}}</span>
-								</ul> 
-							</li>
 					</ul>
 				</div>
 			</div>
-		</div>
+		</div>-->		
 	</div>
 	<!--Contenedores del producto #1-->
 	<div class="container" ng-repeat="x in productos | filter: enlacecategories">

@@ -133,15 +133,17 @@ angular.module('starter.controllers', [])
 
 	$scope.prod = $rootScope.enlacecategories
   $scope.productos = $rootScope.diccionario
-  $scope.logo = $rootScope.diccionario
   $rootScope.carrito={};
-  console.log($scope.productos)
-  console.log($scope.logo)
+  console.log($scope.productos) 
 	//console.log($scope.prod[0])
   $scope.compra = function(x){
     $rootScope.carrito[x.name] = x.Price;
-    $rootScope.carrito["total"] = parseInt($rootScope.carrito.total)+parseInt(x.Price)
+    $rootScope.carrito["total"] = parseInt($rootScope.carrito.total) + parseInt(x.Price)
     console.log($rootScope.carrito)
+  }
+
+  $scope.deleteItem = function(z){
+    delete $rootScope.carrito[z];
   }
 
 })
